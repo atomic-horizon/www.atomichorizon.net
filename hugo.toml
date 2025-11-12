@@ -1,5 +1,65 @@
 baseURL = 'https://www.atomichorizon.net/'
 languageCode = 'en-us'
 title = 'Atomic Horizon'
-theme = "ananke"
+theme = "PaperMod"
 sectionPagesMenu = "main"
+copyright = "© Atomic Horizon LLC"
+
+[params]
+env = "production"
+description = ""
+author = ""
+defaultTheme = "auto"
+ShowShareButtons = true
+displayFullLangName = true
+ShowPostNavLinks = false
+ShowBreadCrumbs = false
+ShowCodeCopyButtons = true
+ShowRssButtonInSectionTermList = false
+ShowAllPagesInArchive = true
+ShowPageNums = true
+ShowToc = true
+images = [ "images/logo.png" ]
+
+  [params.profileMode]
+  enabled = true
+  title = " "
+  imageUrl = "images/logo.png"
+  imageTitle = "Atomic Horizon Logo"
+
+    [[params.profileMode.buttons]]
+    name = "About Us"
+    url = "about"
+
+  [params.homeInfoParams]
+  Title = ""
+  Content = """
+
+"""
+
+  [[params.socialIcons]]
+  name = "github"
+  title = "View our team on Github"
+  url = "https://github.com/atomic-horizon"
+
+  [[params.socialIcons]]
+  name = "Discord"
+  title = "Join the Discord community for Combat Arena"
+  url = "https://discord.gg/5D2BEuwKdr"
+
+  [[params.socialIcons]]
+  name = "X"
+  title = "Follow us on X/Twitter"
+  url = "https://x.com/PlayCombatArena"
+
+  [params.assets]
+  disableHLJS = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+noClasses = false
+
+[services.x]
+disableInlineCSS = true
