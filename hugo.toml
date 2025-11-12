@@ -1,4 +1,5 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://www.atomichorizon.net/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Atomic Horizon'
 theme = "ananke"
+sectionPagesMenu = "main"
