@@ -7,7 +7,8 @@ copyright: © Atomic Horizon LLC
 params:
   env: production
   description: ""
-  author: ""
+  author:
+    name: Atomic Horizon
   defaultTheme: auto
   ShowShareButtons: true
   displayFullLangName: true
@@ -28,6 +29,8 @@ params:
     buttons:
       - name: About Us
         url: about
+      - name: Projects
+        url: projects
   homeInfoParams:
     Title: ""
     Content: "\n"
