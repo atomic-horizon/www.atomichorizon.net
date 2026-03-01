@@ -1,0 +1,37 @@
+{{- $members := slice
+(dict "id" "1924093" "name" "ChiefWildin" "role" "Co-Founder" "url" "https://www.roblox.com/users/1924093/profile")
+(dict "id" "35637443" "name" "TactBacon" "role" "Co-Founder" "url" "https://www.roblox.com/users/35637443/profile")
+(dict "id" "1964419047" "name" "rib3ye" "role" "Co-Founder" "url" "https://www.roblox.com/users/1964419047/profile")
+(dict "id" "19634570" "name" "rulecy" "role" "Art Director" "url" "https://www.roblox.com/users/19634570/profile")
+(dict "id" "65181401" "name" "PetRify" "role" "3D Modeler" "url" "https://www.roblox.com/users/65181401/profile")
+-}}
+
+{{- $ids := slice -}}
+{{- range $members -}}{{- $ids = $ids | append .id -}}{{- end -}}
+
+{{- $apiURL := printf
+"https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=%s&size=420x420&format=Png&isCircular=false" (delimit
+$ids ",") -}}
+{{- $thumbnails := dict -}}
+{{- with resources.GetRemote $apiURL -}}
+{{- with . | transform.Unmarshal -}}
+{{- range .data -}}
+{{- $thumbnails = merge $thumbnails (dict (string .targetId) .imageUrl) -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+<div class="team-grid">
+	{{- range $members -}}
+	{{- $imgURL := index $thumbnails .id | default "" -}}
+	<a class="team-card" href="{{ .url }}" target="_blank" rel="noopener">
+		<div class="team-avatar-wrap">
+			{{- if $imgURL -}}<img class="team-avatar" src="{{ $imgURL }}" alt="{{ .name }}">{{- end -}}
+		</div>
+		<div class="team-info">
+			<span class="team-name">{{ .name }}</span>
+			<span class="team-role">{{ .role }}</span>
+		</div>
+	</a>
+	{{- end -}}
+</div>
