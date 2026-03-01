@@ -6,11 +6,18 @@ sectionPagesMenu: main
 copyright: © Atomic Horizon LLC
 params:
   env: production
-  description: ""
+  description: "Atomic Horizon is a game studio building experiences and tools on the Roblox platform."
   author:
     name: Atomic Horizon
-  defaultTheme: auto
-  ShowShareButtons: true
+  hideAuthor: true
+  defaultTheme: dark
+  disableThemeToggle: true
+  label:
+    text: "Atomic Horizon"
+    icon: images/logo.png
+    iconHeight: 32
+    iconWidth: 32
+  ShowShareButtons: false
   displayFullLangName: true
   ShowPostNavLinks: false
   ShowBreadCrumbs: false
@@ -26,11 +33,13 @@ params:
     title: " "
     imageUrl: images/logo.png
     imageTitle: Atomic Horizon Logo
+    imageWidth: 140
+    imageHeight: 140
     buttons:
+      - name: Our Projects
+        url: projects
       - name: About Us
         url: about
-      - name: Projects
-        url: projects
   homeInfoParams:
     Title: ""
     Content: "\n"

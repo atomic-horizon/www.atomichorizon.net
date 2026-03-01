@@ -1,10 +1,12 @@
 +++
 title = 'Order'
+[cover]
+  image = 'https://raw.githubusercontent.com/atomic-horizon/order/gh-pages/img/embed_banner.png'
+  alt = 'Order banner'
+  relative = false
 +++
 
-![Order banner](https://github.com/atomic-horizon/order/blob/gh-pages/img/embed_banner.png?raw=true)
-
-**[View the Order documentation →](https://order.atomichorizon.net/)**
+<a class="project-cta" href="https://order.atomichorizon.net/" target="_blank" rel="noopener">Get started with Order →</a>
 
 Order is a configurable module-loader framework for Roblox, featuring fast lookups, cyclic dependency support, and a fully customizable initialization pipeline. It powers the architecture behind Combat Arena and is freely available for any Roblox developer to use.
 
@@ -52,4 +54,3 @@ Toggle verbose module-loading logs and cyclic-dependency analysis straight from 
 - [Documentation](https://atomic-horizon.github.io/order/docs/intro)
 - [API Reference](https://atomic-horizon.github.io/order/api)
 - [GitHub](https://github.com/atomic-horizon/order)
-- [Roblox Marketplace](https://www.roblox.com/library/11152308855/)
